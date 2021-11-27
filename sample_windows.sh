@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-
+# ! REMEMBER AT POINT #1 AND #2 ! IF YOU HAVE OTHER DIRECTORY STRUCTURE OR WHITESPACES YOU MUST CHANGE THE SCRIPT FOR YOUR NEEDS
 ### Set Parameter ###
-# 1. Point to the path of your KPScript.exe -> Mostly here C:\Programs\Keepass2\KPScript.exe
-# 2. Point to the path of your Database.kdbx -> Like C:\Users\whoami\Database.kdbx
+# 1. Point to the path of your KPScript.exe -> Mostly here C:\\Programme\\"KeePass Password Safe 2"\\KPScript.exe
+# 2. Point to the path of your Database.kdbx -> Like C:\\Users\\"YOUR USERNAME"\\Database.kdbx
 # 3. Use your Master Key as encrypted Password -> Like AVUVLa97bR31M3O+w6....J3r!KW3L0v3U....d+80jur8UADjHQ=
 # 4. Use the Title of your Entry
 
@@ -11,8 +11,8 @@ path_database=<DATABASE_KDBX> #2
 password_encrypted=<ENCRYPTED_PASSWORD> #3
 title=<TITLE> #4
 function get_credential(){
-cred=$(${path_kpscript_exe} \
-        -c:GetEntryString ${path_database}  \
+cred=$("${path_kpscript_exe}" \
+        -c:GetEntryString "${path_database}"  \
         -pw-enc:${password_encrypted} \
         -Field:${1} \
         -ref-Title:${title})
