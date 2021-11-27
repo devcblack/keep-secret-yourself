@@ -32,6 +32,6 @@ Tutorial to use Single Command Operations with KeePass Scripting Plugin (KPScrip
 ### 10. Open a Text-Editor
 ### 11. Switch back to KeePass, focus your Entry with the 'Master Key', rigth-click and perform a Auto-Type
 ### 12. Save the long encrypted Password in Editor
-### 13. Copy the encrypted Password in sample.sh after flag -pw-enc:
+### 13. Copy the encrypted Password in sample_*.sh for parameter <ENCRYPTED_PASSWORD>:
 ### 14. Create a 'new Entry' with title,username and password
 ### 15. Before using sample_linux.sh or sample_windows.sh for your matching OS look at the comments in the example-script to set parameter 
